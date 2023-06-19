@@ -21,7 +21,7 @@ pipeline {
       steps {
         container('docker') {
           sh 'docker version;'
-          
+          sh 'sleep 5400'
         }
       }
     }
