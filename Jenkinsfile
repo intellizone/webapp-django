@@ -8,6 +8,8 @@ pipeline {
           containers:
           - name: docker
             image: docker
+            securityContext:
+                privileged: true
             tty: true
         '''
     }
