@@ -20,7 +20,7 @@ pipeline {
       steps {
         container('docker') {
           sh 'docker version;'
-          sh 'sleep 5400'
+          sh 'sleep 2700'
         }
       }
     }
