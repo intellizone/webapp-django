@@ -6,10 +6,8 @@ pipeline {
         kind: Pod
         spec:
           containers:
-          - name: maven
-            image: maven:alpine
-            command:
-            - cat
+          - name: docker
+            image: docker
             tty: true
         '''
     }
@@ -17,8 +15,8 @@ pipeline {
   stages {
     stage('Run maven') {
       steps {
-        container('maven') {
-          sh 'mvn -version'
+        container('docker') {
+          sh 'docker version'
         }
       }
     }
