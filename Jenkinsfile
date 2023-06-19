@@ -11,6 +11,8 @@ pipeline {
             securityContext:
                 privileged: true
             tty: true
+          serviceAccount: ecr-sa
+          serviceAccountName: ecr-sa
         '''
     }
   }
@@ -18,7 +20,8 @@ pipeline {
     stage('Run maven') {
       steps {
         container('docker') {
-          sh 'docker version'
+          sh 'docker version;'
+          
         }
       }
     }
