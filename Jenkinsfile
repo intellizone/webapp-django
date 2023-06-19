@@ -20,7 +20,8 @@ pipeline {
       steps {
         container('docker') {
           sh 'docker version;'
-          sh 'sleep 2700'
+          sh 'apk update aws-cli'
+          sh 'aws sts get-caller-identity'
         }
       }
     }
