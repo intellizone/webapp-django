@@ -5,13 +5,13 @@ pipeline {
         apiVersion: v1
         kind: Pod
         spec:
+          serviceAccountName: ecr-sa
           containers:
           - name: docker
             image: docker
             securityContext:
                 privileged: true
             tty: true
-          serviceAccountName: ecr-sa
         '''
     }
   }
