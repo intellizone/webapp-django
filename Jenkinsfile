@@ -1,5 +1,5 @@
 podTemplate(yaml: '''
-    apiVersion: v1
+        apiVersion: v1
         kind: Pod
         spec:
           serviceAccountName: ecr-sa
