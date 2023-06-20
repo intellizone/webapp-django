@@ -5,7 +5,7 @@ RUN apk add --no-cache libpq-dev python3-dev build-base
 RUN pip3 install --no-cache --upgrade pip setuptools
 RUN python -m pip install Django gunicorn psycopg2
 RUN mkdir /app
-WORKDIR /app/
+WORKDIR /app
 # RUN django-admin startproject mysite
 COPY . /app
 WORKDIR /app/webapp_py3
