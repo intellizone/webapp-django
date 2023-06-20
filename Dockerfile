@@ -2,6 +2,7 @@ FROM alpine
 RUN apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
 RUN python3 -m ensurepip
 RUN apk add --no-cache libpq-dev
+RUN apk add build-base
 RUN pip3 install --no-cache --upgrade pip setuptools
 RUN python -m pip install Django gunicorn psycopg2
 RUN mkdir /app
