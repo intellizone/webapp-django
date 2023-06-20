@@ -11,7 +11,6 @@ podTemplate(yaml: '''
             tty: true
 ''') {
   node(POD_LABEL) {
-    stages {
     stage('Setup build') {
       steps {
         container('docker') {
@@ -38,4 +37,4 @@ podTemplate(yaml: '''
     }
   }
 }
-}
+
